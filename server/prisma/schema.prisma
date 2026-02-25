@@ -12,3 +12,38 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+model Host {
+id          Int       @id @default(autoincrement())
+firstName   String  
+lastName    String
+email       String    @unique
+password    String
+createdAt   DateTime  @default(now())
+}
+
+model Properties {
+  id                  Int      @id @default(autoincrement())
+  address             String
+  distance            Float
+  availableParking    Float
+  amount              Float
+  HostId              Int
+}   
+
+model Guest {
+  id           Int     @id @default(autoincrement())
+  firstName    String
+  lastName     String
+  email        String  @unique
+  password     String
+}
+
+model Vehicle {
+  id            Int     @id @default(autoincrement())
+  color         String
+  model         String
+  make          String
+  plateNumber   String
+  GuestId       Int
+}
