@@ -1,6 +1,7 @@
 import React from "react";
 
-function Guest(){
+const Guest = ()=> {
+  console.log('Guest Page is running')
   return (
     <>
     <h1>Guest Dashboard</h1>
