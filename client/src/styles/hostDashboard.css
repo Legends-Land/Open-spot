@@ -1,0 +1,21 @@
+.sidebar{
+  display: flex;
+  min-height: 100vh;
+  width: 220px;
+  padding: 20px;
+  background-color: rgb(171, 120, 219);
+  border: 2px;
+  color: rgb(255, 255, 255);
+  flex-direction: column;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* spacing between links */
+  color: aliceblue;
+}
+
+.sidebar a {
+  color: aliceblue;
+}
