@@ -1,17 +1,17 @@
 import express from "express"
 import cors from "cors"
 import { configDotenv } from "dotenv";
-// import authRoutes from "./routes/authRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 // import guestRoutes from "./routes/guestRoutes.js";
 import hostRoutes from "./routes/hostRoutes.js";
 
 const app = express();
-const PORT = process.env.PORT || 3002
+const PORT = process.env.PORT || 
 
 //Permission to receive req and res from my front end 
 // and responses from my back. No matter the method.
 app.use(cors({
-  origin: "http://localhost:5174", //vite front end
+  origin: process.env.CLIENT_URL , //vite front end
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   // credentials: true,
   //  allowedHeaders: ["Content-Type", "Authorization",]
@@ -22,7 +22,7 @@ app.use(cors({
 app.use(express.json());
 
 //Routes
-// app.use("/auth", authRoutes);
+app.use("/auth", authRoutes);
 // app.use("/guest", guestRoutes);
 app.use("/host", hostRoutes);
 
