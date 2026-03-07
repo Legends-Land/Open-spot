@@ -7,6 +7,7 @@ import Host from './Pages/hostDashboard'
 import Home from './Pages/Home'
 import Login from './Pages/Login'
 import Guest from './Pages/GuestDashBoard'
+import Register from './Pages/Register'
 
 
 
@@ -17,6 +18,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login/>} />
+        <Route path="/register" element={<Register/>} />
         <Route path="/host" element={<Host />} />
         <Route path="/guest" element={<Guest />} />
         <Route path="/home" element={<Home/>} />
