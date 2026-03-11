@@ -1,4 +1,4 @@
-.sidebar{
+.sidebar-host{
   display: flex;
   min-height: 100vh;
   width: 220px;
@@ -9,13 +9,26 @@
   flex-direction: column;
 }
 
-.sidebar nav {
+.sidebar-guest{
+  display: flex;
+  min-height: 100vh;
+  width: 220px;
+  padding: 20px;
+  background-color: rgb(20, 154, 232);
+  border: 2px;
+  color: rgb(255, 255, 255);
+  flex-direction: column;
+}
+
+.sidebar-guest nav,
+.sidebar-host nav {
   display: flex;
   flex-direction: column;
   gap: 15px; /* spacing between links */
   color: aliceblue;
 }
 
-.sidebar a {
+.sidebar-guest a,
+.sidebar-host a {
   color: aliceblue;
 }
