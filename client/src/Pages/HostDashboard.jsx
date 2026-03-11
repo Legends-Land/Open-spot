@@ -1,6 +1,6 @@
 import React from "react"
 import { useState,useEffect } from "react";
-import SideBar from "../Components/sidebar";
+import HostSideBar from "../Components/HostSidebar";
 import '../styles/hostDashboard.css'
 import axios from "axios";
 
@@ -14,7 +14,7 @@ import axios from "axios";
 // };
 
 
-const Host = () => {
+const HostDashboard = () => {
   const [host, setHost] = useState({
     fistName:"",
     lastName: ""
@@ -28,7 +28,7 @@ const Host = () => {
 
   const handleSubmit = async (e) => {
     try {
-      const response = await axios.post("http://localhost:3002/host",host)
+      const response = await axios.post("http://localhost:3002/hostdashboard",host)
     } catch (err) {
       console.error ("Full Error")
     }
@@ -65,10 +65,10 @@ const Host = () => {
 
 
       </form>
-      <SideBar/>
+      <HostSideBar/>
     </div>
   );
 };
 
-export default Host;
+export default HostDashboard;
 
