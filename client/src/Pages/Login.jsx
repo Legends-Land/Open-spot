@@ -78,10 +78,10 @@ function Login () {
     onClick={handleSubmit}
     >Login</button>
 
-    <button>Register</button>
+    <button>Sign Up</button>
     
 
-    <Link to = "/register">Register Here</Link>
+    <Link to = "/signup">Sign Up Here</Link>
 </form>
     </>
 

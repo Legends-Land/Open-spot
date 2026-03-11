@@ -1,7 +1,8 @@
 import React from "react";
-import SideBar from "../Components/sidebar";
+import SideBar from "../Components/HostSidebar";
 import axios from "axios"
 import { useEffect, useState} from "react";
+import GuestSideBar from "../Components/GuestSideBar";
 
 
 
@@ -34,7 +35,7 @@ useEffect(() =>{
   return(
     <> 
     <h1>Welcome</h1>
-    <SideBar/>
+    <GuestSideBar/>
     <div>
      {host.map(user => (
        <div key={user.id}>
