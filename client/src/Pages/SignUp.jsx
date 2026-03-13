@@ -19,8 +19,25 @@ function SignUp () {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-      const response = await axios.post(`${import.meta.env.VITE_SERVER_URL}/auth/register`,values)
-      // const response = await axios.post("http://localhost:3002/auth/register", values)
+      // const response = await axios.post(`${import.meta.env.VITE_SERVER_URL}/auth/signup`,values);
+      const response = await axios.post("http://localhost:3002/auth/signup", values)
+ 
+      console.log("Register Response:" , response.data);
+      console.log("Received from tha backend");
+      // navigate('/')
+
+
+      //Clears my value one handleSubmit is ran
+      setValues({
+        username: "",
+        email: "",
+        password: "",
+      });
+
+      if (response.status === 201) {
+        navigate("/");
+      }
+      
       console.log("Register Response:" , response.data);
       console.log("Received from tha backend");
       navigate('/')
@@ -44,7 +61,7 @@ function SignUp () {
           <input
           name="password"
           placeholder="password"
-          type=""
+          type="password"
           onChange={handleEvent}
           />
 
