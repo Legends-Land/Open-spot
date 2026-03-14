@@ -31,14 +31,14 @@ function Login () {
       console.log('Login Complete')
       navigate("/home")
 
-      const user = response.data.user;
+      
 
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("user", JSON.stringify(response.data.user));
   
-      if (user.role === 'HOST') {
+      if (values.role === 'HOST') {
       navigate('/hostdashboard');
-    } else if (user.role === 'GUEST') {
+    } else if (values.role === 'GUEST') {
       navigate('/guestdashboard');
     }
 
