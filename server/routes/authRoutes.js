@@ -36,12 +36,27 @@ router.post('/login', async (req, res)=>{
   const user = await prisma.user.findUnique({
     where: {
       email: email,
+    
     },
 });
 
   if (!user) {
     return res.status(404).json({ message: "User not found" });
   }
+
+  if (user.role === 'GUEST') {
+  return res.status(200).json({ message: 'Login successful', redirect: '/guest/dashboard' });
+  return res.status(403).json({ message: 'Access denied' });
+}
+
+if (user.role === 'HOST') {
+  return res.status(200).json({ message: 'Login successful', redirect: '/host/dashboard' });
+  return res.status(403).json({ message: 'Access denied' });
+}
+
+
+
+
 
   const isPasswordValid = bcrypt.compareSync(password, user.password);
 
@@ -52,6 +67,8 @@ router.post('/login', async (req, res)=>{
 const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
     expiresIn: "1h",
   });
+
+
 
   return res.json({
     token: token,
