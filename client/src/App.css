@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,35 @@
 
 .read-the-docs {
   color: #888;
+} */
+.app-layout {
+  flex-direction: column;
+  display: flex;
+  /* min-height: 100vh; */
+
+}
+
+@media screen and (min-width: 768px) {
+  .app-layout {
+    flex-direction: row;
+  }
+}
+
+.login {
+display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 350px;
+ background-color: rgb(35, 31, 118);
+ min-height: 50vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 300px;
+  align-items: center;
+  justify-content: center;
+
 }

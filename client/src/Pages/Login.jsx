@@ -2,6 +2,7 @@ import React, { use } from "react";
 import { useNavigate, Link} from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "../App.css"
 
 //Creating a function be ran when a user logs in
 
@@ -61,8 +62,9 @@ function Login () {
 
   return(
     <>
+    <div className="login">
     <form>
-    <h2>Login Page</h2>
+    <h2>Open Spot</h2>
     <input 
     name="email"
     placeholder="email"
@@ -105,6 +107,8 @@ function Login () {
 
     <Link to = "/signup">Sign Up Here</Link>
 </form>
+
+</div>
     </>
 
   )
