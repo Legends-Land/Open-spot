@@ -44,6 +44,7 @@
   flex-direction: column;
   display: flex;
   /* min-height: 100vh; */
+  width: 350px;
 
 }
 
@@ -58,7 +59,7 @@ display: flex;
   flex-direction: row;
   justify-content: center;
   width: 350px;
- background-color: rgb(35, 31, 118);
+ background-color: rgb(50, 200, 195);
  min-height: 50vh;
 }
 
