@@ -6,6 +6,8 @@ const RegisterVehicle = () => {
     <>
     
     <h2>Register Vehicle</h2>
+    
+      <GuestSideBar/>
 
     <label> Model
       <input
@@ -43,7 +45,6 @@ const RegisterVehicle = () => {
       ></input>
     </label>
     
-    <GuestSideBar/>
     </>
   )
 }
