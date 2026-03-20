@@ -11,8 +11,9 @@ const GuestUserSettings = () =>{
 
   return(
     <>
-    <Settings/>
+    <h2>User Settings</h2>
     <GuestSideBar/>
+    <Settings/>
     </>
   )
 } 
