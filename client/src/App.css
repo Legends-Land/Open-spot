@@ -72,3 +72,57 @@ form {
   justify-content: center;
 
 }
+
+/* Hamburger hidden on desktop */
+.hamburger {
+  display: none;
+}
+
+/* Mobile breakpoint */
+@media screen and (max-width: 768px) {
+
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 100;
+  }
+
+  /* The three bars */
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    transition: all 0.3s ease;
+  }
+
+  /* Animate to X when open */
+  .bar1-open {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .bar2-open {
+    opacity: 0;
+  }
+  .bar3-open {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Hide links by default on mobile */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  /* Show links when open */
+  .nav-links.open {
+    display: flex;
+  }
+}
