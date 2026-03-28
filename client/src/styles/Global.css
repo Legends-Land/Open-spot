@@ -1,0 +1,89 @@
+
+.app-layout {
+  flex-direction: column;
+  display: flex;
+  /* min-height: 100vh; */
+  width: 350px;
+
+}
+
+@media screen and (min-width: 768px) {
+  .app-layout {
+    flex-direction: row;
+  }
+}
+
+.login {
+display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 350px;
+ background-color: rgb(50, 200, 195);
+ min-height: 50vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 300px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+
+}
+
+/* Hamburger hidden on desktop */
+.hamburger {
+  display: none;
+}
+
+/* Mobile breakpoint */
+@media screen and (max-width: 768px) {
+
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 100;
+  }
+
+  /* The three bars */
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    transition: all 0.3s ease;
+  }
+
+  /* Animate to X when open */
+  .bar1-open {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .bar2-open {
+    opacity: 0;
+  }
+  .bar3-open {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Hide links by default on mobile */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    color: white;
+  }
+
+  /* Show links when open */
+  .nav-links.open {
+    display: flex;
+  }
+}
