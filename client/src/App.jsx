@@ -6,7 +6,7 @@ import viteLogo from '/vite.svg'
 import Home from './Pages/Home'
 import Login from './Pages/Login'
 import SignUp from './Pages/SignUp'
-import Property from './Pages/RegisterProperty'
+import RegisterProperty from './Pages/RegisterProperty'
 import GuestDashboard from './Pages/GuestDashBoard'
 import HostDashboard from './Pages/HostDashboard'
 import RegisterVehicle from './Pages/RegisterVehicle'
@@ -27,7 +27,7 @@ function App() {
         <Route path="/guestdashboard" element={<ProtectedRoutes><GuestDashboard /></ProtectedRoutes>} />
         <Route path="/home" element={<ProtectedRoutes><Home/></ProtectedRoutes>} />
         <Route path="/hostusersettings" element={<ProtectedRoutes><HostUserSettings/></ProtectedRoutes>} />
-        <Route path="/property" element={<ProtectedRoutes><Property/></ProtectedRoutes>} />
+        <Route path="/registerproperty" element={<ProtectedRoutes><RegisterProperty/></ProtectedRoutes>} />
         <Route path="/registervehicle" element={<ProtectedRoutes><RegisterVehicle/></ProtectedRoutes>} />
         <Route path="/guestusersettings" element={<ProtectedRoutes><GuestUserSettings/></ProtectedRoutes>} />
       </Routes>
