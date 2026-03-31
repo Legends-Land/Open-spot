@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import GuestSideBar from "../Components/GuestSideBar"
 import axios from "axios"
+import GuestHamburgerMenu from "../Components/GuestHamburgerMenu";
 
 const RegisterVehicle = () => {
   const [make, setMake] = useState([]);
@@ -9,7 +10,7 @@ const RegisterVehicle = () => {
     axios.get ("https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json")
     .then((res) => setMake(res.data.Results.map((car) =>({
       id: car.Make_ID,
-      name: car.Make_Name,
+     name: car.Make_Name.charAt(0).toUpperCase() + car.Make_Name.slice(1).toLowerCase()
     }))))
     .catch((err) => console.error ("Sorry can't Fetch Car Model:" , err))
 
@@ -20,7 +21,9 @@ const RegisterVehicle = () => {
     
     <h2>Register Vehicle</h2>
     
-      <GuestSideBar/>
+      {/* <GuestSideBar/> */}
+      <GuestHamburgerMenu/>
+
 <form>
     <label> Make
       <input

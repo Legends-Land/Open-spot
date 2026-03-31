@@ -1,8 +1,12 @@
 import React from "react"
 import { useState,useEffect } from "react";
 import HostSideBar from "../Components/HostSidebar";
-import '../styles/hostDashboard.css'
+import '../styles/Dashboard.css'
 import axios from "axios";
+import "../styles/Global.css";
+import HostHamburgerMenu from "../Components/HostHamburgerMenu";
+import "../styles/HamburgerMenu.css"
+
 
 // function  Host(){
 // return(
@@ -42,6 +46,11 @@ const HostDashboard = () => {
     <div>
       
       <h2>Host Dashboard</h2>
+      <div className="app-layout">
+
+      <HostHamburgerMenu/>
+      <HostSideBar/>
+      </div>
       <form>
         <input
         type=""
@@ -65,8 +74,11 @@ const HostDashboard = () => {
 
 
       </form>
-      <HostSideBar/>
-    </div>
+  
+
+
+      </div>
+
   );
 };
 
