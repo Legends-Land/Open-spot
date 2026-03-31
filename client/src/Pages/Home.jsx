@@ -3,6 +3,7 @@ import SideBar from "../Components/HostSidebar";
 import axios from "axios"
 import { useEffect, useState} from "react";
 import GuestSideBar from "../Components/GuestSideBar";
+import GuestHamburgerMenu from "../Components/GuestHamburgerMenu";
 
 
 
@@ -35,6 +36,7 @@ useEffect(() =>{
   return(
     <> 
     <h1>Welcome</h1>
+    <GuestHamburgerMenu/>
     <GuestSideBar/>
     <div>
      {host.map(user => (
