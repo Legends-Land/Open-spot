@@ -1,42 +1,30 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import "../styles/HamburgerMenu.css";
 
 const GuestHamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav style={{ background: "#139536", padding: "1rem" }}>
-      {/* Hamburger button - only shows on mobile */}
+    <nav className="hamburger-nav guest">
+
+      {/* Hamburger button */}
       <button
+        className="hamburger-btn"
         onClick={() => setIsOpen(!isOpen)}
-        style={{
-          display: "block",
-          background: "none",
-          border: "none",
-          cursor: "pointer",
-        }}
       >
-        <span style={barStyle} />
-        <span style={barStyle} />
-        <span style={barStyle} />
+        <span className="bar" />
+        <span className="bar" />
+        <span className="bar" />
       </button>
 
-      {/* Links - hidden on mobile until hamburger is clicked */}
-      <ul
-        style={{
-          display: isOpen ? "flex" : "none",
-          flexDirection: "column",
-          listStyle: "none",
-          padding: 0,
-          margin: 0,
-        }}
-      >
-        <div className="">
+      {/* Nav links */}
+      <ul className={`nav-links ${isOpen ? "open" : ""}`}>
         <li>
           <Link to="/home" onClick={() => setIsOpen(false)}>Home</Link>
         </li>
         <li>
-        <Link to="/guestdashboard" onClick={() => setIsOpen(false)}>Guest Dashboard</Link>
+          <Link to="/guestdashboard" onClick={() => setIsOpen(false)}>Guest Dashboard</Link>
         </li>
         <li>
           <Link to="/guestusersettings" onClick={() => setIsOpen(false)}>Guest Settings</Link>
@@ -50,26 +38,10 @@ const GuestHamburgerMenu = () => {
         <li>
           <Link to="/hostdashboard" onClick={() => setIsOpen(false)}>Host Dashboard</Link>
         </li>
-      </div>
       </ul>
-      
+
     </nav>
   );
-};
-
-const barStyle = {
-  display: "block",
-  width: "25px",
-  height: "3px",
-  background: "white",
-  margin: "5px 0",
-};
-
-const linkStyle = {
-  color: "white",
-  textDecoration: "none",
-  padding: "0.5rem 0",
-  display: "block",
 };
 
 export default GuestHamburgerMenu;
