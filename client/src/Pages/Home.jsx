@@ -4,6 +4,7 @@ import axios from "axios"
 import { useEffect, useState} from "react";
 import GuestSideBar from "../Components/GuestSideBar";
 import GuestHamburgerMenu from "../Components/GuestHamburgerMenu";
+import "../styles/Global.css"
 
 
 
@@ -35,9 +36,6 @@ useEffect(() =>{
 
   return(
     <> 
-    <h1>Welcome</h1>
-    <GuestHamburgerMenu/>
-    <GuestSideBar/>
     <div>
      {host.map(user => (
        <div key={user.id}>
@@ -47,6 +45,17 @@ useEffect(() =>{
        </div>
      ))}
     </div>
+
+
+    <h1>Welcome</h1>
+    <GuestHamburgerMenu/>
+
+
+     <div className="page-layout">
+      <GuestSideBar/>
+
+    
+    <div className="login-form">
     <input 
     name="email" 
     placeholder="email" 
@@ -71,6 +80,9 @@ useEffect(() =>{
     onSubmit={handleSubmit}
     type="submit"
     >Submit</button>
+
+</div>
+    </div>
     </>
     
   )
