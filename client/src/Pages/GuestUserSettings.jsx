@@ -1,8 +1,9 @@
 import React from "react";
 import SideBar from "../Components/HostSidebar";
-import '../styles/hostdashboard.css'
+import '../styles/Dashboard.css'
 import Settings from "../Components/Settings";
 import GuestSideBar from "../Components/GuestSideBar";
+import GuestHamburgerMenu from "../Components/GuestHamburgerMenu";
 
 
 const GuestUserSettings = () =>{
@@ -13,6 +14,7 @@ const GuestUserSettings = () =>{
     <>
     <h2>User Settings</h2>
     <GuestSideBar/>
+    <GuestHamburgerMenu/>
     <Settings/>
     </>
   )
