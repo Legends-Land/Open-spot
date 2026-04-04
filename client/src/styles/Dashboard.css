@@ -1,6 +1,7 @@
 /* Shared sidebar styles */
 .sidebar-host,
-.sidebar-guest {
+.sidebar-guest,
+.hamburger-host {
   /* display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -9,53 +10,83 @@
   color: white;
   border: 2px solid rgba(255, 255, 255, 0.2); */
 
-  display: block,
-  width: 25px,
-  height: 3px,
+  display: block;
+  width:260px ;
+  height: 65px;
   /* background: "white", */
-  margin: 5px 0,
-  color: white,
-  textDecoration: none,
-  padding: 0.5rem 0,
-  display: block,
+  margin: 5px 0;
+  min-height: 100vh;
+  padding: 0.5rem 0;
 }
 
 /* Role-specific background colors */
-.sidebar-host {
-  /* background-color: rgb(171, 120, 219); */
-}
+/* .sidebar-host {
+  background-color: rgb(171, 120, 219);
+} */
 
 .sidebar-guest {
   background-color: rgb(20, 154, 232);
 }
 
 /* Nav links */
-/* .sidebar-host nav,
+.sidebar-host nav,
 .sidebar-guest nav 
 {
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin-top: 20px;
-} */
+}
 
 .sidebar-host a,
 .sidebar-guest a {
-  /* color: white;
-  text-decoration: none; */
+  color: white;
+  text-decoration: none;
 }
 
 .sidebar-host a:hover,
 .sidebar-guest a:hover {
   opacity: 0.8;
+  color: white;
 }
 
+
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 20px;
+  
+}
+
+a:hover {
+  text-decoration: underline;  /* brings underline back on hover */
+  opacity: 0.8;                /* or just a slight fade */
+}
+
+@media screen and (max-width:600px) {
+.sidebar-host,
+.sidebar-guest {
+  display: none;
+}
+
+}
+
+
+
+
+
+
+
+
+
 /* Mobile — hide sidebar, show as top bar instead */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .sidebar-host,
   .sidebar-guest {
-    width: 100%;       /* full width on mobile */
-    min-height: auto;  /* no longer full height */
+    width: 100%;       
+    min-height: auto;  
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -64,8 +95,10 @@
 
   .sidebar-host nav,
   .sidebar-guest nav {
-    flex-direction: row;  /* links go horizontal on mobile */
-    gap: 16px;
+    flex-direction: row;  
+    gap: 30px;
     margin-top: 0;
+    color: white;
   }
-}
+
+} */
