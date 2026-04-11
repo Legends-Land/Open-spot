@@ -6,7 +6,7 @@ const HostHamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="hamburger-nav">
+    <nav className="hamburger-nav host">
 
       {/* Hamburger button */}
       <button
