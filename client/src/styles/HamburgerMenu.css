@@ -1,7 +1,11 @@
 /* Nav container */
-.hamburger-nav {
-  background: #f32121;
+.hamburger-nav.host {
+  background: #b121f3;
   padding: 1rem;
+}
+
+.hamburger-nav.guest {
+  background-color: rgb(0, 217, 69);
 }
 
 /* Hamburger button */

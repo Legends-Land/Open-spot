@@ -4,14 +4,19 @@
   display: flex;
   /* min-height: 100vh; */
   width: 350px;
+  
 
 }
 
-@media screen and (min-width: 768px) {
+
+ /* Turns into nav bar 
+ Anything under 768 will run this code*/
+/* @media screen and (min-width: 768px) {
   .app-layout {
     flex-direction: row;
+    background-color: salmon;
   }
-}
+} */
 
 .login {
 display: flex;
@@ -30,16 +35,25 @@ form {
   align-items: center;
   justify-content: center;
   margin-top: 5px;
-
 }
+
+
+/* ←  Flex -dir-this stacks everything vertically */
+/* form {
+  display: flex;
+  flex-direction: column; 
+  gap: 12px;
+} */
+
 
 /* Hamburger hidden on desktop */
 .hamburger {
   display: none;
 }
 
-/* Mobile breakpoint */
-@media screen and (max-width: 768px) {
+/* Mobile breakpoint
+anthing over will run this */
+@media screen and (max-width: 600px) {
 
   /* Show hamburger on mobile */
   .hamburger {
@@ -86,4 +100,57 @@ form {
   .nav-links.open {
     display: flex;
   }
+
+
+.app-layout {
+  flex-direction: column;
+  display: flex;
+  /* min-height: 100vh; */
+  width: 350px;
+  background-color: tomato;
+
+}
+}
+
+/* Side Bar */
+@media screen and (min-width: 600px) {
+
+  .app-layout {
+  flex-direction: column;
+  display: flex;
+  /* min-height: 100vh; */
+  width: 350px;
+  background-color: royalblue;
+
+}
+
+}
+
+/* Side Bar */
+@media screen and (min-width: 1024px) {
+
+  .app-layout {
+  flex-direction: column;
+  display: flex;
+  /* min-height: 100vh; */
+  width: 350px;
+  background-color: rgb(225, 198, 65);
+
+}
+}
+
+
+/* Sidebar and form sit side by side */
+.page-layout {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Form takes up remaining space */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  flex: 1; /* fills the remaining space next to sidebar */
 }

@@ -1,18 +1,43 @@
-import SideBar from "../Components/HostSidebar";
+import HostHamburgerMenu from "../Components/HostHamburgerMenu";
+import HostSideBar from "../Components/HostSidebar";
+import "../styles/HamburgerMenu.css"
+import "../styles/Dashboard.css"
 
 
-const Property = () => {
+const RegisterProperty = () => {
 
 
 
 return(
-<>
-<form>
+<div>
+
   <h2>Register Property</h2>
+  <div className="app-layout">
+
+  <HostHamburgerMenu/>
+    <HostSideBar/>
+
+    </div>
+
+<div>
+<form>
   <label>Address
   <input
   type="text"
   ></input>
+  </label>
+
+  <label>City
+  <input
+  type="text"
+  ></input>
+
+  </label>
+  <label>Zip Code
+  <input
+  type="text"
+  ></input>
+
   </label>
 
   <label>Parking Available
@@ -29,11 +54,11 @@ return(
   ></input>
   </label>
 </form>
-<SideBar/>
-</>
+</div>
+</div>
 )
 
 
 }
 
-export default Property;
+export default RegisterProperty;

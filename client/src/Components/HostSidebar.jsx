@@ -11,9 +11,10 @@ const HostSideBar = () => {
       
         <aside>
         <nav>  
+      <Link to ="/home">Home </Link>
       <Link to ="/hostdashboard"> Host Dashboard </Link>
       <Link to ="/hostusersettings">User Settings</Link>
-      <Link to ="/property">Register Property</Link>
+      <Link to ="/registerproperty">Register Property</Link>
       <Link to ="/">Log Out </Link>
       <Link to ="/guestdashboard">Guest Dashboard </Link>
         </nav>

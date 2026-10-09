@@ -21,10 +21,10 @@ const RegisterVehicle = () => {
     
     <h2>Register Vehicle</h2>
     
-      {/* <GuestSideBar/> */}
       <GuestHamburgerMenu/>
+      <GuestSideBar/>
 
-<form>
+
     <label> Make
       <input
     type="text"
@@ -67,7 +67,7 @@ const RegisterVehicle = () => {
       type="color"
       ></input>
     </label>
-    </form>
+  
     
     </>
   )
