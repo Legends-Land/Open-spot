@@ -9,7 +9,7 @@ const GuestDashboard = ()=> {
     <>
     <div className="app-layout">
 
-    <h1>Guest Dashboard</h1>
+    <h1>Guest  Dashboard</h1>
     {/* <GuestSideBar/> */}
     <GuestHamburgerMenu/>
     <GuestSideBar/>
